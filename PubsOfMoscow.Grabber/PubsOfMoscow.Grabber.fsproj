@@ -58,6 +58,7 @@
     <Compile Include="ParseOptions.fs" />
     <Compile Include="Pub.fs" />
     <Compile Include="MapParser.fs" />
+    <Compile Include="DataComparer.fs" />
     <Compile Include="Program.fs" />
     <None Include="App.config" />
     <Content Include="packages.config" />

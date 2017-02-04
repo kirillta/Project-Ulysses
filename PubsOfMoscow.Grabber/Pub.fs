@@ -4,8 +4,8 @@ type Pub = {
         Title: string;
         EnglishTitle: string;
         Type: string;
-        Latitude: string; 
-        Longitude: string;
+        Latitude: decimal; 
+        Longitude: decimal;
         Address: string;
         District: string;
         PostalCode: string;

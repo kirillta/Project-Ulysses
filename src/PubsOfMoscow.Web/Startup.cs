@@ -47,7 +47,6 @@ namespace PubsOfMoscow.Web
             loggerFactory.AddDebug();
 
             app.UseApplicationInsightsRequestTelemetry();
-
             app.UseApplicationInsightsExceptionTelemetry();
 
             app.UseMvc();

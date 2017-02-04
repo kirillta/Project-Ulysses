@@ -14,6 +14,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
+    <ApplicationInsightsResourceId>/subscriptions/ad6e7304-38b2-45ea-8be5-5223323eea70/resourcegroups/Default-ApplicationInsights-EastUS/providers/microsoft.insights/components/PubsOfMoscow.Web</ApplicationInsightsResourceId>
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\DotNet.Web\Microsoft.DotNet.Web.targets" Condition="'$(VSToolsPath)' != ''" />
 </Project>

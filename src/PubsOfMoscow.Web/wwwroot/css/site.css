@@ -24,6 +24,10 @@
   padding: .2em;
   text-decoration: none;
 }
+.note {
+  font-style: italic;
+  font-size: 80%;
+}
 .pub-chart {
   display: flex;
   flex-flow: row wrap;
@@ -53,15 +57,16 @@
 .text-centered {
   text-align: center;
 }
-.time-frame {
-  text-align: center;
-}
-#Rules {
+.taxt-frame {
   background-color: #242121;
+  max-width: 60%;
   opacity: 0.9;
 }
-#Rules > p {
-  padding: 0 .5em;
+.taxt-frame > p {
+  padding: 0 1em;
+}
+.time-frame {
+  text-align: center;
 }
 footer {
   padding: 5em 0 .1em;

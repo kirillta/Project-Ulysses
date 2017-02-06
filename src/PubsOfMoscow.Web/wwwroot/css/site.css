@@ -17,6 +17,31 @@
   margin: auto;
   width: 90%;
 }
+.form {
+  margin: auto;
+  padding: 0 1em 1em 1em;
+}
+.form div:nth-child(1) textarea {
+  background-color: #412008;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  height: 5em;
+  margin: 0 1em;
+  width: 100%;
+}
+.form div:nth-child(2) input {
+  background-color: #412008;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 100%;
+  margin: 1em;
+  opacity: .9;
+  padding: .3em;
+  text-decoration: none;
+}
+.form div:nth-child(2) input:hover {
+  cursor: pointer;
+}
 .menu-button {
   border: 0.1em solid #ffffff;
   color: #ffffff;
@@ -35,11 +60,10 @@
 }
 .pub-desc {
   border: 1px solid;
-  background-color: #242121;
+  background-color: #412008;
   flex: 1 1 0;
   margin: 0 1em;
   max-width: 30%;
-  opacity: 04;
   padding: .5em 1em;
 }
 .pub-desc.activated {
@@ -48,7 +72,7 @@
 }
 .pub-desc.deactivated {
   border-color: #ffffff;
-  opacity: 0.6;
+  opacity: .6;
 }
 .pub-desc > span {
   font-size: x-small;
@@ -58,12 +82,13 @@
   text-align: center;
 }
 .taxt-frame {
-  background-color: #242121;
+  background-color: #412008;
   max-width: 60%;
-  opacity: 0.9;
+  opacity: .9;
 }
 .taxt-frame > p {
   padding: 0 1em;
+  text-indent: 2em;
 }
 .time-frame {
   text-align: center;
@@ -77,7 +102,6 @@ footer > a {
   text-decoration: none;
 }
 footer > a > img {
-  fill: #ffffff;
   height: auto;
   width: 1em;
 }

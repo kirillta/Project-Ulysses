@@ -1,5 +1,5 @@
 ﻿@primaryColor: #ffffff;
-@secondaryColor: #242121;
+@secondaryColor: #412008;
 @selectedColor: #ff0000;
 @bgColor: #000000;
 
@@ -24,6 +24,38 @@ body {
 .flex-item {
     margin: auto;
     width: 90%;
+}
+
+.form {
+    margin: auto;
+    padding: 0 1em 1em 1em;
+
+    & div:nth-child(1) {
+        textarea {
+            background-color: @secondaryColor;
+            border: 1px solid @primaryColor;
+            color: @primaryColor;
+            height: 5em;
+            margin: 0 1em;
+            width: 100%;
+        }
+    }
+    & div:nth-child(2) {
+        input {
+            background-color: @secondaryColor;
+            border: 1px solid @primaryColor;
+            color: @primaryColor;
+            font-size: 100%;
+            margin: 1em;
+            opacity: .9;
+            padding: .3em;
+            text-decoration: none;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
 }
 
 .menu-button {
@@ -51,7 +83,6 @@ body {
     flex: 1 1 0;
     margin: 0 1em;
     max-width: 30%;
-    opacity: 04;
     padding: .5em 1em;
 
     &.activated {
@@ -61,7 +92,7 @@ body {
 
     &.deactivated {
         border-color: @primaryColor;
-        opacity: 0.6;
+        opacity: .6;
     }
 
     > span {
@@ -77,10 +108,11 @@ body {
 .taxt-frame {
     background-color: @secondaryColor;
     max-width: 60%;
-    opacity: 0.9;
+    opacity: .9;
 
     > p { 
         padding: 0 1em;
+        text-indent: 2em;
     }
 }
 
@@ -97,7 +129,6 @@ footer {
         text-decoration: none;
 
         > img {
-            fill: @primaryColor;
             height: auto;
             width: 1em;
         }

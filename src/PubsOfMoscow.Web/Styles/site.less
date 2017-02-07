@@ -1,12 +1,31 @@
-﻿@primaryColor: #ffffff;
+﻿@font-face {
+    font-family: 'Chelsea';
+    src: url('../wwwroot/fonts/Chelsea.ttf');
+}
+
+@font-face {
+    font-family: "Pirates Two";
+    src: url('../wwwroot/fonts/PiratesTwo.ttf');
+}
+
+@font-face {
+    font-family: "Charis";
+    src: url('../wwwroot/fonts/CharisSILR.ttf');
+}
+
+@primaryColor: #ffffff;
 @secondaryColor: #412008;
 @selectedColor: #ff0000;
 @bgColor: #000000;
 
 body {
+    background-attachment: fixed;
     background-color: @bgColor;
-    background-image: url("../wwwroot/images/pub-483944_1920.jpg");
+    background-image: url("../wwwroot/images/pub-483944_1920-min.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     color: @primaryColor;
+    font-family: Charis, 'Times New Roman', Times, serif;
     font-size: 100%;
     margin: 0;
 }
@@ -35,8 +54,9 @@ body {
             background-color: @secondaryColor;
             border: 1px solid @primaryColor;
             color: @primaryColor;
+            font-family: Charis, 'Times New Roman', Times, serif;
             height: 5em;
-            margin: 0 1em;
+            margin: 2em 0 1em;
             width: 100%;
         }
     }
@@ -45,6 +65,7 @@ body {
             background-color: @secondaryColor;
             border: 1px solid @primaryColor;
             color: @primaryColor;
+            font-family: Charis, 'Times New Roman', Times, serif;
             font-size: 100%;
             margin: 1em;
             opacity: .9;
@@ -87,18 +108,28 @@ body {
 
     &.activated {
         border-color: @selectedColor;
-        opacity: .9;
+        opacity: .95;
     }
 
     &.deactivated {
         border-color: @primaryColor;
-        opacity: .6;
+        opacity: .7;
     }
 
-    > span {
+    .address {
         font-size: x-small;
         font-style: italic;
     }
+
+    .title {
+        font-family: 'Chelsea', Arial, Helvetica, sans-serif;
+    }
+}
+
+.pirated {
+    font-family: 'Pirates Two';
+    font-size: 2em;
+    padding: 1em 0;
 }
 
 .text-centered {
@@ -107,6 +138,7 @@ body {
 
 .taxt-frame {
     background-color: @secondaryColor;
+    line-height: 1.2;
     max-width: 60%;
     opacity: .9;
 
@@ -121,8 +153,8 @@ body {
 }
 
 footer {
-    padding: 5em 0 .1em;
-    font-size: xx-small;
+    padding: 0 0 .1em;
+    font-size: x-small;
 
     > a {
         color: @primaryColor;
@@ -133,6 +165,10 @@ footer {
             width: 1em;
         }
     }
+}
+
+h2 {
+    font-weight: normal;
 }
 
 header {

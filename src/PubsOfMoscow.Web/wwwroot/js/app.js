@@ -1,6 +1,7 @@
 ﻿"use strict";
 
 function sendRequest(method, controller, data) {
+    document.body.style.cursor = "wait";
     var url = "/api/" + controller;
 
     var request = new XMLHttpRequest();
@@ -11,6 +12,7 @@ function sendRequest(method, controller, data) {
     request.setRequestHeader("cache-control", "no-cache");
 
     request.send(JSON.stringify(data));
+    document.body.style.cursor = "default";
 }
 
 function assignCongratulationEvent() {
@@ -19,14 +21,12 @@ function assignCongratulationEvent() {
 }
 
 function sendCongratulation() {
-    document.body.style.cursor = "wait";
-
     var textarea = document.getElementById("CongratulationText");
     var content = { content: textarea.value };
     sendRequest("POST", "congratulations", content);
     textarea.value = "";
 
-    document.body.style.cursor = "default";
+    document.getElementById("CongratulationSubmit").value = "Написать ещё";
 }
 
 document.addEventListener("DOMContentLoaded", ready);

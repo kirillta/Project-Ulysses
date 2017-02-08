@@ -241,3 +241,6 @@ ModelManifest.xml
 # FAKE - F# Make
 .fake/
 PubsOfMoscow.Grabber/App.config
+/src/PubsOfMoscow.Web/Properties/PublishProfiles/project-ulysses - Web Deploy-publish.ps1
+/src/PubsOfMoscow.Web/Properties/PublishProfiles/project-ulysses - Web Deploy.pubxml
+/src/PubsOfMoscow.Web/Properties/PublishProfiles/publish-module.psm1

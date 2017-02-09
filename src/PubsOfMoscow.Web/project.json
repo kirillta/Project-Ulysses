@@ -24,7 +24,9 @@
     "Microsoft.Extensions.Logging.Debug": "1.1.0",
     "Microsoft.Extensions.Options.ConfigurationExtensions": "1.1.0",
     "Newtonsoft.Json": "9.0.1",
-    "Microsoft.EntityFrameworkCore.SqlServer": "1.1.0"
+    "Microsoft.EntityFrameworkCore.SqlServer": "1.1.0",
+    "Microsoft.EntityFrameworkCore.Tools": "1.1.0-preview4-final",
+    "Microsoft.EntityFrameworkCore.Design": "1.1.0" 
   },
 
   "frameworks": {
@@ -57,7 +59,8 @@
 
   "tools": {
     "Microsoft.AspNetCore.Server.IISIntegration.Tools": "1.1.0-preview4-final",
-    "Microsoft.Extensions.SecretManager.Tools": "1.1.0-preview4-final"
+    "Microsoft.Extensions.SecretManager.Tools": "1.1.0-preview4-final",
+    "Microsoft.EntityFrameworkCore.Tools.DotNet": "1.1.0-preview4-final"
   },
 
   "userSecretsId": "aspnet-WebApp1-e7fef9c0-f34d-420c-b072-829bac26401e"

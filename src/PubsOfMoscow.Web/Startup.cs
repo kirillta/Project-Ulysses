@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using PubsOfMoscow.Web.Data;
 
 namespace PubsOfMoscow.Web
@@ -38,10 +40,16 @@ namespace PubsOfMoscow.Web
             services.AddApplicationInsightsTelemetry(Configuration);
 
             var connectionString = string.Format(
-                @"Server=tcp:nagoya.database.windows.net,1433;Initial Catalog=pubs-of-moscow;Persist Security Info=False;User ID={0};Password={1};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;",
+                //@"Server=tcp:nagoya.database.windows.net,1433;Initial Catalog=pubs-of-moscow;Persist Security Info=False;User ID={0};Password={1};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;",
+                @"Server=tcp:nagoya.database.windows.net,1433;Initial Catalog=project-ulysses-text;Persist Security Info=False;User ID={0};Password={1};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;",
                 Configuration["NagoyaKey"], Configuration["NagoyaPass"]);
             services.AddDbContext<ApplicationDbContext>(o => o.UseSqlServer(connectionString));
-            services.AddMvc();
+            services.AddMvc()
+                .AddJsonOptions(o =>
+                {
+                    o.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+                    o.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+                });
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)

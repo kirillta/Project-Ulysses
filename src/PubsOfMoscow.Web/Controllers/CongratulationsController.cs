@@ -17,6 +17,14 @@ namespace PubsOfMoscow.Web.Controllers
         }
 
 
+        [HttpGet]
+        public IEnumerable<string> Get() 
+            => _context.Congratulations
+                .Where(c => c.IsApproved)
+                .Select(c => c.Content)
+                .ToList();
+
+
         [HttpPost]
         public async Task Post([FromBody] Congratulation congratulation)
         {

@@ -14,6 +14,14 @@ namespace PubsOfMoscow.Web.Data
             builder.Entity<Pub>()
                 .HasOne(p => p.Round)
                 .WithMany(r => r.Pubs);
+
+            builder.Entity<Pub>()
+                .Property(p => p.Latitude)
+                .HasColumnType("decimal(13,8)");
+
+            builder.Entity<Pub>()
+                .Property(p => p.Longitude)
+                .HasColumnType("decimal(13,8)");
         }
 
 

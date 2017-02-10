@@ -8,9 +8,10 @@ using PubsOfMoscow.Web.Data;
 namespace PubsOfMoscow.Web.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170209192003_Pubs")]
+    partial class Pubs
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.0-rtm-22752")
@@ -39,19 +40,15 @@ namespace PubsOfMoscow.Web.Migrations
 
                     b.Property<string>("Address");
 
-                    b.Property<DateTime>("EstimateStartTime");
-
-                    b.Property<string>("IconUrl");
+                    b.Property<string>("EstimateStartTime");
 
                     b.Property<bool>("IsChosen");
 
                     b.Property<decimal>("Latitude")
-                        .HasColumnType("decimal(13,8)");
-
-                    b.Property<string>("LogoUrl");
+                        .HasColumnType("decimal(5,8)");
 
                     b.Property<decimal>("Longitude")
-                        .HasColumnType("decimal(13,8)");
+                        .HasColumnType("decimal(5,8)");
 
                     b.Property<int>("RoundId");
 

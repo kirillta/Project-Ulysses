@@ -16,33 +16,9 @@ namespace PubsOfMoscow.Web.Controllers
         }
 
 
-        [HttpPost("close")]
-        public void Close([FromBody] int roundNumber)
-        {
-
-        }
-
-
         [HttpGet]
         public IEnumerable<Round> Get()
             => _context.Rounds.Include("Pubs").ToList();
-
-        
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-
-        [HttpPost("open")]
-        public void Open([FromBody] int roundId, int pubId)
-        {
-            if (roundId < 1 || pubId < 1)
-                return;
-
-
-        }
 
 
         private readonly ApplicationDbContext _context;
